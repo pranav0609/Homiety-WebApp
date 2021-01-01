@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban clone | Booking</title>
+    <link rel="stylesheet" href="/assets/home.css">
+</head>
+<body>
+    <section class="section">
+        <h3>
+            <br><br>
+            <center>Thank you for reaching Homiety!! please provide your registered Mobile number and password to place your order.
+         </center>
+            </h3>
+    <div class="parent-form-order">
+        <center>
+        <form action="/services/electrician/repair" method="POST" class="form-order">
+        
+        <label for="number" class="text-value">Enter Number</label>
+        <input type="text" id="number" name="number">
+        <br><br>
+        <label for="password" class="text-value">Enter password</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+        <label for="order" class="text-value">ordered</label>
+        <input type="text" id="order" name= "order" value="<%= order %>" disabled>
+        <br><br>
+        
+        <button type="submit" onclick="return confirm('Are you sure you want to place this order?');" class="text-value btn-style">
+            PLACE <br> ORDER
+        </button>
+    </center>
+    </form>
+    </div>
+</section>
+    <footer class="main-footer">
+        <div class="main-footer main-footer-container">
+            <h3 class="footer-title">HOMIETY</h3>
+            
+                <ul class="nav footer-nav">
+                    <li>
+                       <a href="#">
+                           <img src="/assets/Facebook Logo.png" alt="">
+                       </a> 
+                    </li>
+                    <li>
+                       <a href="#">
+                           <img src="/assets/insta logo.PNG" alt="">
+                       </a>
+                    </li>
+                    <li>
+                       <a href="#">
+                           <img src="/assets/linkedin logo.PNG" alt="">
+                       </a> 
+                    </li>
+                </ul>
+        </div>
+    </footer>
+</body>
+</html>

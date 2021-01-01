@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Clone | Booking</title>
+    <link rel="stylesheet" href="/assets/home.css">
+</head>
+
+<body>
+    <section class="section section-text">
+        <center>
+    <div class="intro">
+        <hr>
+        <br>
+        <br>
+            
+        Hello <%= name_details %>
+        <br>
+        <br>
+
+        This is your registered address: <span class="address">
+            <%= address_details %>
+        </span> 
+        <br>
+        <br>
+        Do you want your service to be delivered at the same address? <br><br>
+        If yes, please
+        <a href="/" onclick="return confirm('Your order is confirmed!')"> click here</a>
+        to proceed.
+        </div>        
+    </center>
+    <br>
+        <hr>
+        <center class="intro">
+            <br>
+        If no, please provide your required address below.
+        <br>        
+            <form  action="/services/plumbing/fixing?_method=PUT" method="POST">
+                <br>
+                <input type="hidden" name="_id" value="<%= id_details %>">
+                <br>
+                <label for="number">Enter address</label>
+                <input type="text" name="Address">
+                <br><br><br>
+                <button type="submit" onclick="return confirm('Are you sure you want to change the address?');" class="text-value btn-style">SAVE</button>
+              </form>
+        </center>
+            </section>
+            <footer class="main-footer">
+                <div class="main-footer main-footer-container">
+                    <h3 class="footer-title">URBANCLAP</h3>
+                    
+                        <ul class="nav footer-nav">
+                            <li>
+                               <a href="#">
+                                   <img src="/assets/Facebook Logo.png" alt="">
+                               </a> 
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <img src="/assets/insta logo.PNG" alt="">
+                               </a>
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <img src="/assets/linkedin logo.PNG" alt="">
+                               </a> 
+                            </li>
+                        </ul>
+                </div>
+            </footer>       
+        
+</body>
+</html>

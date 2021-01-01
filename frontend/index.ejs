@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="/assets/home.css">
+    
+    <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script> 
+</head>
+<body>
+    <section class="section">
+    <br>
+    <br>
+    <form action="/myaccount/{{user_details._id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_id" value="<%= user_details._id %>">
+    <label for="name" class="text-value"> Name: </label>
+    <input id = "input" type="text" name="name" disabled value="<%= user_details.Name %>"/> 
+     
+    <br>
+    <br>
+    <label for="address" class="text-value"> Regd. Address: </label>
+    <input id = "input" type="text" name="address" disabled value="<%= user_details.address %>"/>
+    <br><br>
+    <button type="button" onClick="window.location.href=window.location.href">
+        SAVE DETAILS
+    </button>
+    </form>
+    Click here if you want to edit your user details => 
+    <button onclick="enable_disable()">
+        Edit 
+    </button>
+
+    <div class="end-of-line">
+
+    </div>   
+      
+    <!-- Script to enable input text fields -->       
+    <script>  
+        function enable_disable() { 
+            $("input").prop('disabled', false);
+        } 
+    </script> 
+    <br>
+    <br>
+    <center>
+    YOUR ORDERS
+    <br><br>
+    <% if(details!=null) { %>
+    <table>
+    <tr>
+        
+        <TH>BOOKING MADE</TH>
+        <th>ADDRESS</th>
+        
+    </tr>
+    <% details.forEach(function(orders){ %>
+    <tr>
+        
+        <td><%= orders.order %></td>
+        <TD><%= orders.address %></TD>
+        <td>
+            <form action="/myaccount/{{details._id}}?_method=DELETE" method="POST">
+                <input type="hidden" name="id" value="<%= orders._id %>">
+                <button type="submit" onclick="return confirm('are you sure you want to cancel this ?');">
+                    CANCEL ORDER
+                </button>
+            </form>
+            </td>
+        
+        
+    
+    </tr>
+    <% }) %>
+    </table>
+    <% } %>
+    </center>
+    </section>
+    <footer class="main-footer">
+        <div class="main-footer main-footer-container">
+            <h3 class="footer-title">HOMIETY</h3>
+            
+                <ul class="nav footer-nav">
+                    <li>
+                       <a href="#">
+                           <img src="/assets/Facebook Logo.png" alt="">
+                       </a> 
+                    </li>
+                    <li>
+                       <a href="#">
+                           <img src="/assets/insta logo.PNG" alt="">
+                       </a>
+                    </li>
+                    <li>
+                       <a href="#">
+                           <img src="/assets/linkedin logo.PNG" alt="">
+                       </a> 
+                    </li>
+                </ul>
+        </div>
+    </footer>
+</body>
+</html>
