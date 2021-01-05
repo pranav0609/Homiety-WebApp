@@ -159,8 +159,8 @@ li {
   }
   .image {
     float: left;
-    height: 350px;
-    width: 450px;
+    height: 285px;
+    width: 310px;
     margin: 15px;
     border-radius: 15%;
 }
@@ -170,8 +170,8 @@ li {
 
 .image-2 {
     float: right;
-    height: 350px;
-    width: 450px;
+    height: 285px;
+    width: 310px;
     margin: 15px;
     border-radius: 15%;
 }
@@ -181,8 +181,8 @@ li {
 
 .services-img {
     float: right;
-    height: 300px;
-    width: 400px;
+    height: 285px;
+    width: 310px;
     margin: 15px;
     border-radius: 15%;
 }

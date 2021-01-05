@@ -45,12 +45,12 @@ app.use('/services/electrician/repair', elec_repair);
 app.use('/services/electrician/installation', elec_install);
 app.use('/services/electrician/replacement', elec_repalce);
 app.use('/services/housekeeping', house);
-app.use('/services/maid/sweep', maid_sweep);
-app.use('/services/maid/deep', maid_deep);
+// app.use('/services/maid/sweep', maid_sweep);
+// app.use('/services/maid/deep', maid_deep);
 app.use('/services/painting', painting);
 app.use('/services/pest-control', pest_control);
 app.use('/services/gardening', gardening);
-app.use('/services/security', security);
+// app.use('/services/security', security);
 app.use('/myaccount', auth);
 app.use('/admin', admin_auth);
 
@@ -117,13 +117,13 @@ app.get('/services/housekeeping', (req, res) => {
     res.render('final_order_housekeeping.ejs', { order: 'Housekeeping'});
 })
 
-app.get('/services/maid/sweep', (req, res) => {
-    res.render('final_order_maid_sweep.ejs', { order: 'Maid - Sweeping & Dusting'});
-})
+// app.get('/services/maid/sweep', (req, res) => {
+//     res.render('final_order_maid_sweep.ejs', { order: 'Maid - Sweeping & Dusting'});
+// })
 
-app.get('/services/maid/deep', (req, res) => {
-    res.render('final_order_maid_deep.ejs', { order: 'Maid - Deep Cleaning'});
-})
+// app.get('/services/maid/deep', (req, res) => {
+//     res.render('final_order_maid_deep.ejs', { order: 'Maid - Deep Cleaning'});
+// })
 
 app.get('/services/painting', (req, res) => {
     res.render('final_order_painting.ejs', { order: 'House Painting'});
@@ -137,9 +137,9 @@ app.get('/services/gardening', (req, res) => {
     res.render('final_order_gardening.ejs', { order: 'Gardening'});
 })
 
-app.get('/services/security', (req, res) => {
-    res.render('final_order_security.ejs', { order: 'Security'});
-})
+// app.get('/services/security', (req, res) => {
+//     res.render('final_order_security.ejs', { order: 'Security'});
+// })
 
 app.get('/admin', (req, res) => {
     res.render('admin.ejs');
