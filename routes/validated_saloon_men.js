@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
         new_order = new Order({ 
                 name: user.Name,
                 Number: user.number,
-                order: 'Maid - Deep Cleaning',
+                order: 'Saloon - Men',
                 address: user.address
         })
         

@@ -14,18 +14,22 @@ router.post('/', async (req, res) => {
         if(!user) return res.status(400).send('user does not exist');
 
         const password = await bcrypt.compare(req.body.password, user.password);
-        if(!password) return res.status(400).send('invalid password');
+        if(!password) return res.status(400).send('invalid password');  
 
         new_order = new Order({ 
-                name: user.Name,
+                name: user.Name,               
                 Number: user.number,
-                order: 'Maid - Sweeping & Dusting',
+                order: 'Renovation',
                 address: user.address
         })
         
        
         await new_order.save();
         res.render("update-address-order", {address_details: user.address, name_details: user.Name, id_details: new_order._id});  
+        
+        
 })
+
+
   
 module.exports = router;

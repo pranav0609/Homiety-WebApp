@@ -3,6 +3,7 @@ const {Admin, validate} = require('../models/admin_model');
 // will encrypt the admin password later and then use bcrypt
 // const bcrypt = require('bcrypt');
 const express = require('express');
+const { User } = require('../models/user');
 const { Order } = require('../models/create_new_order');
 const router =  express.Router();
 
@@ -18,14 +19,14 @@ router.post('/', async (req, res) => {
         if(!password) return res.status(400).send('Invalid password');
 
         await Order.find(
-                function (err, orders) {
-                        if (err) {
-                            console.log(err);
-                        } else {
-                            res.render("index_admin", { details: orders, user_details: user })
-                        }
-                    })
-        
+                async function (err, orders) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                                res.render("index_admin", { details: orders, user_details: user })
+                    }
+                }
+            )                
 })
 
 module.exports = router;
