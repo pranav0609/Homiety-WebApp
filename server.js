@@ -15,12 +15,12 @@ const elec_repair = require('./routes/validated_electrician_repair');
 const elec_install = require('./routes/validated_electrician_installation');
 const elec_repalce = require('./routes/validated_electrician_replacement');
 const house = require('./routes/validated_housekeeping');
-const maid_sweep = require('./routes/validated_maid_sweep');
-const maid_deep = require('./routes/validated_maid_deep');
+const saloon_women = require('./routes/validated_saloon_women');
+const saloon_men = require('./routes/validated_saloon_men');
 const painting = require('./routes/validated_painting');
 const pest_control = require('./routes/validated_pest_control');
 const gardening = require('./routes/validated_garden');
-const security = require('./routes/validated_security');
+const renovation = require('./routes/validated_renovation');
 const auth = require('./routes/auth');
 const admin_auth = require('./routes/admin_auth');
 
@@ -45,12 +45,12 @@ app.use('/services/electrician/repair', elec_repair);
 app.use('/services/electrician/installation', elec_install);
 app.use('/services/electrician/replacement', elec_repalce);
 app.use('/services/housekeeping', house);
-// app.use('/services/maid/sweep', maid_sweep);
-// app.use('/services/maid/deep', maid_deep);
+app.use('/services/saloon/women', saloon_women);
+app.use('/services/saloon/men', saloon_men);
 app.use('/services/painting', painting);
 app.use('/services/pest-control', pest_control);
 app.use('/services/gardening', gardening);
-// app.use('/services/security', security);
+app.use('/services/renovation', renovation);
 app.use('/myaccount', auth);
 app.use('/admin', admin_auth);
 
@@ -85,8 +85,8 @@ app.get('/services/electrician', (req, res) => {
 })
 
 
-app.get('/services/maid', (req, res) => {
-    res.render('maid.ejs');
+app.get('/services/saloon', (req, res) => {
+    res.render('saloon.ejs');
 })
 
 app.get('/services/plumbing/fixing', (req, res) => {
@@ -117,13 +117,13 @@ app.get('/services/housekeeping', (req, res) => {
     res.render('final_order_housekeeping.ejs', { order: 'Housekeeping'});
 })
 
-// app.get('/services/maid/sweep', (req, res) => {
-//     res.render('final_order_maid_sweep.ejs', { order: 'Maid - Sweeping & Dusting'});
-// })
+app.get('/services/saloon/women', (req, res) => {
+    res.render('final_order_saloon_women.ejs', { order: 'Salon - Women'});
+})
 
-// app.get('/services/maid/deep', (req, res) => {
-//     res.render('final_order_maid_deep.ejs', { order: 'Maid - Deep Cleaning'});
-// })
+app.get('/services/saloon/men', (req, res) => {
+    res.render('final_order_saloon_men.ejs', { order: 'Saloon - Men'});
+})
 
 app.get('/services/painting', (req, res) => {
     res.render('final_order_painting.ejs', { order: 'House Painting'});
@@ -137,9 +137,9 @@ app.get('/services/gardening', (req, res) => {
     res.render('final_order_gardening.ejs', { order: 'Gardening'});
 })
 
-// app.get('/services/security', (req, res) => {
-//     res.render('final_order_security.ejs', { order: 'Security'});
-// })
+app.get('/services/renovation', (req, res) => {
+    res.render('final_order_renovation.ejs', { order: 'Renovation'});
+})
 
 app.get('/admin', (req, res) => {
     res.render('admin.ejs');
