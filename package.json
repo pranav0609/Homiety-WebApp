@@ -1,8 +1,11 @@
 {
-  "name": "urbanclap-clone",
+  "name": "Homiety",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "12.18.2"
+  },
   "dependencies": {
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
@@ -13,7 +16,7 @@
     "method-override": "^3.0.0",
     "mongoose": "^5.10.2",
     "nodemon": "^2.0.4",
-    "reload": "^3.1.0"
+    "reload": "^3.1.0"    
   },
   "devDependencies": {},
   "scripts": {
