@@ -24,7 +24,7 @@ const renovation = require('./routes/validated_renovation');
 const auth = require('./routes/auth');
 const admin_auth = require('./routes/admin_auth');
 
-mongoose.connect('mongodb+srv://homiety_admin:AwWLsV7tANxLPuf@cluster0.fpd3z.mongodb.net/homiety?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://new_user:9M7TEjeFhWdbAeXV@cluster0.psuux.mongodb.net/homiety?retryWrites=true&w=majority')
             .then(() => console.log('connected to homiety'))
             .catch(err => console.log('could not connect.'));
 
