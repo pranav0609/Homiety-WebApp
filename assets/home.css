@@ -241,15 +241,6 @@ li {
     height: 80px;
 }
 
-.footer-title {
-    color: antiquewhite;
-}
-
-.admin-title {
-    padding-left: 10px;
-    color: wheat;
-    text-decoration: none;
-}
 
 .main-footer-container {
     background-image: url("header footer img.png");
@@ -259,6 +250,16 @@ li {
 .main-footer-container ul{
     flex-grow: 1;
     text-align: end;
+}
+
+.footer-title {
+    color: antiquewhite;
+}
+
+.admin-title {
+    padding-left: 10px;
+    color: wheat;
+    text-decoration: none;
 }
 
 
