@@ -4,6 +4,7 @@ const PORT = process.env.PORT || 1000;
 
 var bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+//mongoose.set('useNewUrlParser', true);
 var methodOverride = require('method-override');
 const { User } = require('./models/user');
 const register = require('./routes/register');
@@ -26,9 +27,10 @@ const renovation = require('./routes/validated_renovation');
 const auth = require('./routes/auth');
 const admin_auth = require('./routes/admin_auth');
 
-mongoose.connect('mongodb+srv://new_user:9M7TEjeFhWdbAeXV@cluster0.psuux.mongodb.net/homiety?retryWrites=true&w=majority')
-            .then(() => console.log('connected to homiety'))
-            .catch(err => console.log('could not connect.'));
+mongoose.connect('mongodb+srv://admin:ht16xFeLoJjoLALO@cluster0.jxvhg.mongodb.net/homiety?retryWrites=true&w=majority')
+    .then(() => console.log('connected to mongodb...'))
+    .catch(err => console.log('couldnot connect to mongodb', err));
+
 
 app.set('views', './frontend');
 app.set('view engine', 'ejs');
