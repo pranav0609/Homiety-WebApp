@@ -238,7 +238,7 @@ li {
     width: 100%;
     bottom: 0;
     left: 0;
-    height: 80px;
+    height: 60px;
 }
 
 
@@ -247,7 +247,7 @@ li {
     width: 100%;
     bottom: 0;
     left: 0;
-    height: 80px;
+    height: 60px;
     display: flex;
     align-items: center;
 }
@@ -276,4 +276,16 @@ li {
     border-radius: 20%;
     width: 25px;
     height: 25px;
+}
+.main-footer-container-2 {
+    background-image: url("header footer img.PNG");
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+}
+.copyright {
+    color: white;
+    font-size: x-large;
+    font-weight: 300;
 }
