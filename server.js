@@ -27,7 +27,7 @@ const renovation = require('./routes/validated_renovation');
 const auth = require('./routes/auth');
 const admin_auth = require('./routes/admin_auth');
 
-mongoose.connect('mongodb+srv://admin:ht16xFeLoJjoLALO@cluster0.jxvhg.mongodb.net/homiety?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://new_user:FXrxpCFb8pJgc8Yp@cluster0.uddnp.mongodb.net/homiety?retryWrites=true&w=majority')
     .then(() => console.log('connected to mongodb...'))
     .catch(err => console.log('couldnot connect to mongodb', err));
 
