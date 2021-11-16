@@ -1,7 +1,7 @@
 # Homiety-WebApp
 This is the source code of Homiety Web App Project.
 Homiety is a platform for connecting skilled workers such as plumbers, electricians etc directly to customers.
-
+Check the application here: https://homiety-webapp.herokuapp.com/
 The Backend is built using Express.js and the frontend is rendered via EJS templating engine.
 
 The functionalities included in this application are:
